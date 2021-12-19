@@ -1,0 +1,15 @@
+.pay{
+    background-image: url("https://blog.magestore.com/wp-content/uploads/2020/11/payment-methods.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:500px;
+    width:auto;
+}
+.payback{
+    font-size:60px;
+    font-weight:bold;
+    color:white;
+    padding-top:20%;
+    padding-left: 10%;
+}

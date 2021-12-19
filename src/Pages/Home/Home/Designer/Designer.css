@@ -1,0 +1,8 @@
+.designer{
+    background-color: #060912;
+    color:white;
+}
+.design{
+    display: flex;
+    align-items: center;
+}

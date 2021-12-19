@@ -1,0 +1,15 @@
+
+.back{
+   background-image: url('http://businessdoctors.co.za/wp-content/uploads/2020/04/businessman-hand-touching-five-star-review-increase-rating-company-concept_20693-222.jpg');
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+}
+.itemform{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    padding:20px;
+}

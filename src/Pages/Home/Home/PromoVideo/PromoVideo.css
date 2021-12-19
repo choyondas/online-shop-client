@@ -1,0 +1,9 @@
+.Promo{
+    background-color: #161723;
+    
+}
+.eng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -8,7 +8,7 @@ const UpdateOrder = () => {
   // show information update using id
 
   useEffect(() => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://stark-reaches-58520.herokuapp.com/orders/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setUser(data));
@@ -33,7 +33,7 @@ const UpdateOrder = () => {
 
   // update user function handle
   const handleUpdataUser = (e) => {
-    const url = `http://localhost:5000/orders/${id}`;
+    const url = `https://stark-reaches-58520.herokuapp.com/orders/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {

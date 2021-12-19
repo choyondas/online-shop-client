@@ -18,7 +18,7 @@ const PlaceOrder = () => {
 
   //fetch by id
   useEffect(() => {
-    const url = `http://localhost:5000/products/${id}`;
+    const url = `https://stark-reaches-58520.herokuapp.com/products/${id}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setItem(data));
@@ -29,7 +29,7 @@ const PlaceOrder = () => {
     // const savedCart = getStoredCart();
     // data.order = savedCart;
     console.log(data);
-    fetch("http://localhost:5000/orders", {
+    fetch("https://stark-reaches-58520.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -7,12 +7,13 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import { Link } from "react-router-dom";
 
 const MyOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    const url = `http://localhost:5000/orders?email=${user.email}`;
+    const url = `https://stark-reaches-58520.herokuapp.com/orders?email=${user.email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setOrders(data));
@@ -23,7 +24,7 @@ const MyOrders = () => {
   const handleDelUser = (id) => {
     const proceed = window.confirm("Are you want to delete?");
     if (proceed) {
-      const url = `http://localhost:5000/orders/${id}`;
+      const url = `https://stark-reaches-58520.herokuapp.com/orders/${id}`;
       fetch(url, {
         method: "DELETE",
       })
@@ -66,7 +67,7 @@ const MyOrders = () => {
                 <TableCell>{order.productName}</TableCell>
                 <TableCell>{order.address}</TableCell>
                 <TableCell>{order.phone}</TableCell>
-                
+
                 <TableCell>
                   <button
                     className="btn btn-danger"
@@ -75,8 +76,15 @@ const MyOrders = () => {
                     Delete
                   </button>
                 </TableCell>
-
-                
+                <TableCell>
+                  {order.payment ? (
+                    "paid"
+                  ) : (
+                    <Link to={`/dashboard/payment/${order._id}`}>
+                      <button>pay</button>
+                    </Link>
+                  )}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

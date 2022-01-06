@@ -16,12 +16,13 @@ import { Button } from "@mui/material";
 import OrdersInfo from "../OrdersInfo/OrdersInfo";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import AddProduct from "../AddProduct/AddProduct";
-import Pay from "../../Pay/Pay";
+
 import useAuth from "../../../Hooks/useAuth";
 import Review from "../../Review/Review";
 import Manager from "./Manager/Manager";
 import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
 import ManageProducts from "../ManageProducts/ManageProducts";
+import Payment from "../Payment/Payment";
 
 const drawerWidth = 240;
 
@@ -86,11 +87,7 @@ function Dashboard(props) {
           <Link to="/">
             <Button variant="contained"> Home Page</Button>
           </Link>
-          <br />
-          <br />
-          <Link to={`${url}/pay`}>
-            <Button variant="contained">Pay</Button>
-          </Link>
+
           <br />
           <br />
           <Link to={`${url}/ordersInfo`}>
@@ -209,8 +206,8 @@ function Dashboard(props) {
           <Route exact path={path}>
             <Manager></Manager>
           </Route>
-          <Route  path={`${path}/payment:id`}>
-            <Pay></Pay>
+          <Route path={`${path}/payment/:id`}>
+            <Payment></Payment>
           </Route>
           <Route path={`${path}/makeAdmin`}>
             <MakeAdmin></MakeAdmin>
@@ -221,9 +218,7 @@ function Dashboard(props) {
           <Route path={`${path}/addProduct`}>
             <AddProduct></AddProduct>
           </Route>
-          <Route path={`${path}/pay`}>
-            <Pay></Pay>
-          </Route>
+
           <Route path={`${path}/review`}>
             <Review></Review>
           </Route>

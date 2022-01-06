@@ -116,14 +116,14 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{ marginRight: "10px" }} /> University Road, Kunming,
+          <Room style={{ marginRight: "10px" }} /> Kunming,
           China
         </ContactItem>
         <ContactItem>
-          <Phone style={{ marginRight: "10px" }} /> +8613085375070
+          <Phone style={{ marginRight: "10px" }} /> +8615494564967
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{ marginRight: "10px" }} /> choyondas08@gmail.com
+          <MailOutline style={{ marginRight: "10px" }} /> seham@gmail.com
         </ContactItem>
 
         <Payment src="https://user-images.githubusercontent.com/52581/44384465-5e312780-a570-11e8-9336-7b54978a9e64.png" />

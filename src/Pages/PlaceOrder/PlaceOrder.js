@@ -131,6 +131,20 @@ const PlaceOrder = () => {
                 padding: "5px 10px",
               }}
               type="text"
+              defaultValue={item.price}
+              {...register("price", { required: true })}
+            />
+            <br />
+            <input
+              style={{
+                width: "75%",
+                lineHeight: "30px",
+                margin: "10px",
+                borderRadius: "6px",
+                border: "none",
+                padding: "5px 10px",
+              }}
+              type="text"
               defaultValue={id}
               {...register("productId")}
             />

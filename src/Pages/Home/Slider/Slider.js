@@ -48,33 +48,7 @@ const Slide = styled.div`
   align-items: center;
   background-color: #${(props) => props.bg};
 `;
-const ImgContainer = styled.div`
-  height: 100%;
-  flex: 1;
-`;
-const Image = styled.img`
-  height: 80%;
-`;
 
-const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
-`;
-const Title = styled.h1`
-  font-size: 70px;
-`;
-const Description = styled.p`
-  margin: 50px 0px;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-`;
-const Button = styled.button`
-  padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
-  cursor: pointer;
-`;
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -94,16 +68,10 @@ const Slider = () => {
       <Wrapper slideIndex={slideIndex}>
         {slideItems.map((item) => (
           <Slide bg={item.bg} key={item.key}>
-            <ImgContainer>
-              <img src={item.img} alt="" />
-            </ImgContainer>
-            <InfoContainer>
-              <Title>{item.title}</Title>
-              <Description>{item.description}</Description>
-              <Link to="/allproducts">
-                <Button>SHOW NOW</Button>
-              </Link>
-            </InfoContainer>
+         
+              <img src="https://assets.materialup.com/uploads/6ec43bb8-d7b1-4e1d-9f44-68f7fcb817b5/attachment.jpg" alt="" />
+           
+            
           </Slide>
         ))}
       </Wrapper>

@@ -90,7 +90,7 @@ const Navbar = () => {
       <Wrapper>
         <Left>
           <Logo src="https://i.ibb.co/pR5C5H3/logo.png"></Logo>
-          <LogoText>EASY SHOP</LogoText>
+          <LogoText>SHOP</LogoText>
         </Left>
         <Center>
           {/* <Language>EN</Language> */}
